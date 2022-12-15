@@ -47,17 +47,52 @@ h1 {
   min-height: 50px;
   padding-top: 20px;
   text-align: center;
-  background-image: url('https://cdn.dribbble.com/users/823181/screenshots/3894893/scenery_illustration.png');
+  background-image: url('http://www.animationsoftware7.com/img/agifs/snow02.gif');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  clip-path: url('https://upload.wikimedia.org/wikipedia/commons/0/0f/Scandinavian_Snowflake.svg');
+  clip-path: url(#snowLarge);
   color: transparent;
   padding: 16px;
   border: 4px solid white;
   border-radius: 8px;
   box-sizing: border-box;
 }
+
+.L {
+  width: 100vw;
+  height: 100vh;
+  padding: 1pt;
+
+  background-image: url(https://images.unsplash.com/photo-1528287942171-fbe365d1d9ac?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&w=1200&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  -webkit-mask-image: url(snowfeild.svg);
+  mask-image: url(snowfeild.svg);
+  -webkit-mask-size: 25%;
+  mask-size: 25%;
+  mask-repeat: repeat;
+  mask-position: 50%;
+  background-attachment: fixed;
+
+  -webkit-animation: mask-play 120s forwards;
+  animation: mask-play 120s forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+@keyframes mask-play {
+  from {
+    -webkit-mask-position: 50% 0;
+    mask-position: 50% 0;
+  }
+  to {
+    -webkit-mask-position: 50% 1000%;
+    mask-position: 50% 1000%;
+  }
+}
+
 
 .circle {
   height: 100px;
